@@ -63,58 +63,45 @@ const PlanOrbit = () => {
   return (
     <div className="flex-1 flex flex-col items-center justify-center relative py-4">
       {/* Plan Orbit Title */}
-      <div className="glass-card rounded-full px-8 py-2 mb-6 border-glow">
+      <div className="glass-card rounded-full px-8 py-2 mb-4 border-glow">
         <h2 className="font-display text-sm font-bold tracking-[0.3em] text-foreground">PLAN ORBIT</h2>
       </div>
 
       {/* Orbit Container */}
-      <div className="relative w-full max-w-[800px] h-[420px]">
-        {/* Orbit Rings */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[500px] h-[500px] rounded-full border absolute" style={{ borderColor: 'hsl(190 50% 30% / 0.15)' }} />
-          <div className="w-[380px] h-[380px] rounded-full border absolute" style={{ borderColor: 'hsl(190 50% 30% / 0.2)' }} />
-          <div className="w-[260px] h-[260px] rounded-full border absolute" style={{ borderColor: 'hsl(190 50% 30% / 0.1)' }} />
-        </div>
-
-        {/* Center Orb */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-          <VoiceOrb />
-        </div>
-
-        {/* Plan Cards positioned around orbit */}
-        {/* Top Left */}
-        <div className="absolute top-0 left-0">
+      <div className="relative w-full max-w-[850px] mx-auto">
+        {/* Row 1: Top cards */}
+        <div className="flex justify-between px-4 mb-4">
           <PlanCard {...plans[0]} />
-        </div>
-
-        {/* Left Middle */}
-        <div className="absolute top-[45%] -left-2 -translate-y-1/2">
-          <PlanCard {...plans[1]} />
-        </div>
-
-        {/* Bottom Left-Center */}
-        <div className="absolute bottom-0 left-[15%]">
-          <PlanCard {...plans[2]} />
-        </div>
-
-        {/* Top Right */}
-        <div className="absolute top-0 right-0">
           <PlanCard {...plans[3]} />
         </div>
 
-        {/* Right Middle */}
-        <div className="absolute top-[45%] -right-2 -translate-y-1/2">
+        {/* Row 2: Middle cards + Orb */}
+        <div className="flex items-center justify-between px-0 relative mb-4">
+          <PlanCard {...plans[1]} />
+          
+          {/* Center Orb with orbit rings */}
+          <div className="relative flex items-center justify-center" style={{ width: '280px', height: '280px' }}>
+            <div className="absolute w-[280px] h-[280px] rounded-full border" style={{ borderColor: 'hsl(190 50% 30% / 0.15)' }} />
+            <div className="absolute w-[220px] h-[220px] rounded-full border" style={{ borderColor: 'hsl(190 50% 30% / 0.2)' }} />
+            <div className="absolute w-[160px] h-[160px] rounded-full border" style={{ borderColor: 'hsl(190 50% 30% / 0.1)' }} />
+            <VoiceOrb />
+          </div>
+
           <PlanCard {...plans[4]} />
         </div>
 
-        {/* Bottom Right */}
-        <div className="absolute bottom-0 right-[10%]">
+        {/* Row 3: Bottom cards + Family Info */}
+        <div className="flex items-start justify-between px-4">
+          <PlanCard {...plans[2]} />
+          
+          {/* Family Info centered */}
+          <div className="flex-1 flex justify-center pt-2">
+            <FamilyInfo />
+          </div>
+
           <PlanCard {...plans[5]} />
         </div>
       </div>
-
-      {/* Family Info */}
-      <FamilyInfo />
     </div>
   );
 };
