@@ -1,5 +1,5 @@
 import { useState } from "react";
-import lsfLogo from "@/assets/lsf-logo.png";
+import lsfLogo from "@/assets/lsf-logo-clean.png";
 
 const navItems = ["DASHBOARD", "PLANS", "COMPARISON", "SUPPORT", "ACCOUNT"];
 
