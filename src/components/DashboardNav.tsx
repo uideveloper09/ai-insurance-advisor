@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import lsfLogo from "@/assets/lsf-logo-clean.png";
 
 const navItems = ["DASHBOARD", "PLANS", "COMPARISON", "SUPPORT", "ACCOUNT"];
