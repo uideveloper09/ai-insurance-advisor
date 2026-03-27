@@ -10,7 +10,7 @@ const DashboardNav = () => {
     <nav className="flex items-center px-8 py-3 border-b" style={{ backgroundColor: 'hsl(215 35% 15%)', borderBottomColor: 'hsl(215 25% 25%)' }}>
       {/* Logo */}
       <div className="mr-4 md:mr-12 flex-shrink-0 flex items-center">
-        <img src={lsfLogo} alt="LSF" className="h-10 md:h-12 w-auto" />
+        <img src={lsfLogo} alt="LSF" className="w-auto" style={{ height: 'auto' }} />
       </div>
 
       {/* Nav Items - spread evenly */}
