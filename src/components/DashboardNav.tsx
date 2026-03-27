@@ -6,7 +6,7 @@ const DashboardNav = () => {
   const [active, setActive] = useState("DASHBOARD");
 
   return (
-    <nav className="flex items-center px-8 py-3 border-b" style={{ backgroundColor: 'hsl(216 40% 12%)', borderBottomColor: 'hsl(215 30% 22%)' }}>
+    <nav className="flex items-center px-8 py-3 border-b" style={{ backgroundColor: 'hsl(215 35% 15%)', borderBottomColor: 'hsl(215 25% 25%)' }}>
       {/* Logo */}
       <div className="relative font-display text-3xl font-bold tracking-wider italic mr-12" style={{ color: '#c89a3c' }}>
         LSF
@@ -23,10 +23,14 @@ const DashboardNav = () => {
             onClick={() => setActive(item)}
             className={`px-8 py-2.5 font-display text-xs tracking-widest transition-all duration-300 rounded-md ${
               active === item
-                ? "border border-primary bg-primary/50 text-foreground font-bold"
+                ? "font-bold"
                 : "hover:text-foreground"
             }`}
-            style={active !== item ? { color: 'hsl(35 40% 70%)' } : undefined}
+            style={
+              active === item
+                ? { border: '1px solid hsl(35 50% 40%)', backgroundColor: 'hsl(35 40% 30% / 0.6)', color: 'hsl(210 30% 90%)' }
+                : { color: 'hsl(215 25% 65%)' }
+            }
           >
             {item}
           </button>
