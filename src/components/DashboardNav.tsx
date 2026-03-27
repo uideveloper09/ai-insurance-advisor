@@ -8,10 +8,16 @@ const DashboardNav = () => {
   return (
     <nav className="flex items-center px-8 py-3 border-b" style={{ backgroundColor: 'hsl(215 35% 15%)', borderBottomColor: 'hsl(215 25% 25%)' }}>
       {/* Logo */}
-      <div className="relative font-display text-3xl font-bold tracking-wider italic mr-12" style={{ color: '#c89a3c' }}>
-        LSF
-        <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 60 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 5C10 2 20 1 30 1C40 1 50 2 60 3" stroke="#c89a3c" strokeWidth="2" strokeLinecap="round"/>
+      <div className="relative mr-12 flex items-center">
+        <svg width="80" height="36" viewBox="0 0 80 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* L */}
+          <text x="0" y="26" fontFamily="Orbitron, sans-serif" fontSize="28" fontWeight="800" fontStyle="italic" fill="white">L</text>
+          {/* S - orange */}
+          <text x="18" y="26" fontFamily="Orbitron, sans-serif" fontSize="28" fontWeight="800" fontStyle="italic" fill="#e8792b">S</text>
+          {/* F */}
+          <text x="38" y="26" fontFamily="Orbitron, sans-serif" fontSize="28" fontWeight="800" fontStyle="italic" fill="white">F</text>
+          {/* Orange swoosh underline */}
+          <path d="M2 32 Q20 28 40 30 Q55 32 75 29" stroke="#e8792b" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
         </svg>
       </div>
 
