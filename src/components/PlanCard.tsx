@@ -45,7 +45,7 @@ const PlanCard = ({ name, type, price, matchPercent, badge, logoColor, logoText 
         <div className="min-w-0">
           <h3 className="font-display text-[11px] font-bold text-foreground tracking-wide leading-tight">{name}</h3>
           <p className="text-muted-foreground text-[10px] font-ui">{type}</p>
-          <p className="text-primary text-xs font-bold font-ui">{price}</p>
+          <p className="text-xs font-bold font-ui" style={{ color: 'hsl(40 85% 50%)' }}>{price}</p>
         </div>
       </div>
 

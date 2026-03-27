@@ -71,9 +71,9 @@ const PlanOrbit = () => {
       <div className="relative w-full max-w-[800px] h-[420px]">
         {/* Orbit Rings */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[500px] h-[500px] rounded-full border border-primary/10 absolute" />
-          <div className="w-[380px] h-[380px] rounded-full border border-primary/15 absolute" />
-          <div className="w-[260px] h-[260px] rounded-full border border-primary/5 absolute" />
+          <div className="w-[500px] h-[500px] rounded-full border absolute" style={{ borderColor: 'hsl(190 50% 30% / 0.15)' }} />
+          <div className="w-[380px] h-[380px] rounded-full border absolute" style={{ borderColor: 'hsl(190 50% 30% / 0.2)' }} />
+          <div className="w-[260px] h-[260px] rounded-full border absolute" style={{ borderColor: 'hsl(190 50% 30% / 0.1)' }} />
         </div>
 
         {/* Center Orb */}
