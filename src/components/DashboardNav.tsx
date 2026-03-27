@@ -8,8 +8,11 @@ const DashboardNav = () => {
   return (
     <nav className="flex items-center justify-between px-6 py-3 glass-surface">
       {/* Logo */}
-      <div className="font-display text-2xl font-bold tracking-wider text-primary italic">
+      <div className="relative font-display text-3xl font-bold tracking-wider italic" style={{ color: '#c89a3c' }}>
         LSF
+        <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 60 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 5C10 2 20 1 30 1C40 1 50 2 60 3" stroke="#c89a3c" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
       </div>
 
       {/* Nav Items */}
