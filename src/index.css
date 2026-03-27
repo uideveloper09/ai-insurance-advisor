@@ -6,52 +6,52 @@
 
 @layer base {
   :root {
-    --background: 220 40% 8%;
+    --background: 216 45% 7%;
     --foreground: 210 40% 96%;
 
-    --card: 220 45% 12%;
+    --card: 216 42% 11%;
     --card-foreground: 210 40% 96%;
 
-    --popover: 220 45% 12%;
+    --popover: 216 42% 11%;
     --popover-foreground: 210 40% 96%;
 
-    --primary: 199 89% 48%;
+    --primary: 40 85% 50%;
     --primary-foreground: 220 40% 8%;
 
-    --secondary: 220 40% 18%;
+    --secondary: 216 38% 16%;
     --secondary-foreground: 210 40% 96%;
 
-    --muted: 220 30% 15%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 216 30% 14%;
+    --muted-foreground: 215 20% 50%;
 
-    --accent: 35 100% 55%;
+    --accent: 40 85% 50%;
     --accent-foreground: 220 40% 8%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 96%;
 
-    --border: 215 30% 22%;
-    --input: 215 30% 22%;
-    --ring: 199 89% 48%;
+    --border: 215 30% 20%;
+    --input: 215 30% 20%;
+    --ring: 40 85% 50%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --glow-primary: 199 89% 48%;
+    --glow-primary: 40 85% 50%;
     --glow-green: 142 70% 49%;
     --glow-orange: 25 95% 55%;
     --glow-red: 0 80% 55%;
-    --glow-gold: 45 100% 55%;
-    --surface-glass: 220 50% 14%;
-    --surface-elevated: 220 42% 16%;
-    --nav-active: 199 89% 48%;
-    --banner-bg: 199 89% 48%;
-    --orbit-ring: 199 60% 30%;
+    --glow-gold: 40 85% 50%;
+    --surface-glass: 216 45% 12%;
+    --surface-elevated: 216 40% 14%;
+    --nav-active: 40 85% 50%;
+    --banner-bg: 40 85% 50%;
+    --orbit-ring: 190 50% 25%;
     --match-high: 142 70% 49%;
     --match-mid: 35 95% 55%;
     --best-match: 142 70% 49%;
     --sabse-sasta: 25 95% 55%;
-    --insight-bg: 220 35% 10%;
+    --insight-bg: 216 40% 9%;
 
     --sidebar-background: 220 40% 8%;
     --sidebar-foreground: 210 40% 96%;
