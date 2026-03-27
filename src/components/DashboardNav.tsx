@@ -6,7 +6,7 @@ const DashboardNav = () => {
   const [active, setActive] = useState("DASHBOARD");
 
   return (
-    <nav className="flex items-center justify-between px-6 py-3 glass-surface">
+    <nav className="flex items-center justify-between px-6 py-3 glass-surface border-b border-[hsl(215_30%_25%)]">
       {/* Logo */}
       <div className="relative font-display text-3xl font-bold tracking-wider italic" style={{ color: '#c89a3c' }}>
         LSF
@@ -16,14 +16,14 @@ const DashboardNav = () => {
       </div>
 
       {/* Nav Items */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-2">
         {navItems.map((item) => (
           <button
             key={item}
             onClick={() => setActive(item)}
-            className={`px-6 py-2.5 font-display text-xs tracking-widest transition-all duration-300 rounded-md ${
+            className={`px-7 py-2.5 font-display text-xs tracking-widest transition-all duration-300 rounded-md ${
               active === item
-                ? "bg-primary text-primary-foreground glow-primary font-bold"
+                ? "border-2 border-primary bg-primary/30 text-primary-foreground font-bold"
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
