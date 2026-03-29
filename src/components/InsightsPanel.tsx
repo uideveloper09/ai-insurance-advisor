@@ -1,18 +1,19 @@
 import { X } from "lucide-react";
-import { useState } from "react";
 
-const InsightsPanel = () => {
-  const [open, setOpen] = useState(true);
+interface InsightsPanelProps {
+  onClose?: () => void;
+}
 
-  if (!open) return null;
-
+const InsightsPanelContent = ({ onClose }: InsightsPanelProps) => {
   return (
-    <div className="w-[280px] glass-card rounded-l-xl p-5 h-full overflow-y-auto border-l border-primary/20">
+    <>
       <div className="flex items-center justify-between mb-4">
         <h2 className="font-display text-sm font-bold tracking-wider text-foreground">AI PLAN INSIGHTS</h2>
-        <button onClick={() => setOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors">
-          <X className="w-4 h-4" />
-        </button>
+        {onClose && (
+          <button onClick={onClose} className="text-muted-foreground hover:text-foreground transition-colors">
+            <X className="w-4 h-4" />
+          </button>
+        )}
       </div>
 
       <p className="text-muted-foreground text-xs font-ui mb-4 leading-relaxed">
@@ -57,8 +58,18 @@ const InsightsPanel = () => {
           PED Cover Start Date - 11:30 time last 5:00 pr
         </li>
       </ul>
+    </>
+  );
+};
+
+// Desktop sidebar version
+const InsightsPanel = () => {
+  return (
+    <div className="w-[280px] glass-card rounded-l-xl p-5 h-full overflow-y-auto border-l border-primary/20">
+      <InsightsPanelContent />
     </div>
   );
 };
 
+export { InsightsPanelContent };
 export default InsightsPanel;
