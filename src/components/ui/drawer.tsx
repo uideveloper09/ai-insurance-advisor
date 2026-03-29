@@ -36,7 +36,7 @@ const DrawerContent = React.forwardRef<
       )}
       {...props}
     >
-      <div className="mx-auto mt-4 h-1.5 w-[60px] rounded-full" style={{ backgroundColor: 'hsl(215 30% 35%)' }} />
+      <div className="mx-auto mt-4 h-1.5 w-[60px] rounded-full" style={{ backgroundColor: 'hsl(190 60% 40%)', boxShadow: '0 0 8px hsl(190 60% 50% / 0.6), 0 0 20px hsl(190 60% 50% / 0.3)' }} />
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>
