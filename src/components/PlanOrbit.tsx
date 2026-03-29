@@ -61,14 +61,34 @@ const plans = [
 
 const PlanOrbit = () => {
   return (
-    <div className="flex-1 flex flex-col items-center justify-center relative py-4">
+    <div className="flex-1 flex flex-col items-center justify-start md:justify-center relative py-4 overflow-y-auto overflow-x-hidden">
       {/* Plan Orbit Title */}
-      <div className="glass-card rounded-full px-8 py-2 mb-4 border-glow">
-        <h2 className="font-display text-sm font-bold tracking-[0.3em] text-foreground">PLAN ORBIT</h2>
+      <div className="glass-card rounded-full px-6 md:px-8 py-2 mb-4 border-glow">
+        <h2 className="font-display text-xs md:text-sm font-bold tracking-[0.3em] text-foreground">PLAN ORBIT</h2>
       </div>
 
-      {/* Orbit Container */}
-      <div className="relative w-full max-w-[850px] mx-auto">
+      {/* Mobile Layout: scrollable vertical list */}
+      <div className="md:hidden w-full px-4 space-y-4">
+        {/* Voice Orb at top on mobile */}
+        <div className="flex justify-center py-4">
+          <VoiceOrb />
+        </div>
+
+        {/* Cards in a 2-column grid */}
+        <div className="grid grid-cols-2 gap-3">
+          {plans.map((plan, i) => (
+            <PlanCard key={i} {...plan} />
+          ))}
+        </div>
+
+        {/* Family Info */}
+        <div className="flex justify-center py-4">
+          <FamilyInfo />
+        </div>
+      </div>
+
+      {/* Desktop Layout: Orbit pattern */}
+      <div className="hidden md:block relative w-full max-w-[850px] mx-auto">
         {/* Row 1: Top cards */}
         <div className="flex justify-between px-4 mb-4">
           <PlanCard {...plans[0]} />
