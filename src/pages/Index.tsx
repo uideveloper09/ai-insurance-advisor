@@ -14,12 +14,14 @@ const Index = () => {
       <DashboardNav />
 
       {/* Main Content */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
         {/* Orbit Area */}
         <PlanOrbit />
 
-        {/* Insights Sidebar */}
-        <InsightsPanel />
+        {/* Insights Sidebar - hidden on mobile, shown on md+ */}
+        <div className="hidden md:block">
+          <InsightsPanel />
+        </div>
       </div>
 
       {/* Bottom Bar */}
